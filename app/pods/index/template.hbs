@@ -1,0 +1,11 @@
+<h1>Github explorer</h1>
+<hr/>
+<ul>
+  {{#each controller as |person| }}
+    <li> {{#link-to "user" person}}{{person.name}}{{/link-to}} </li>
+  {{/each}}
+</ul>
+<p>
+  <button class="btn btn-primary" {{action 'clickMe'}}>click me</button>
+</p>
+{{outlet}}

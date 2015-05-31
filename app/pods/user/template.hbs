@@ -1,0 +1,30 @@
+{{#with model as |person|}}
+  <div class="row">
+    <div class="col-md-3">
+      <div class="well">
+        <p class="text-center"></p>
+        <h4>{{#link-to "user" person}}{{person.name}}{{/link-to}}</h4>
+        <ul class="list-unstyled">
+          <li>{{person.company}}</li>
+          <li>{{person.location}}</li>
+          <li>{{person.email}}</li>
+        </ul>
+        <table class="table table-stripped">
+          <tr>
+            <td>Followers:</td>
+            <td>{{person.followers}}</td>
+          </tr>
+          <tr>
+            <td>Repositories:</td>
+            <td>{{person.public_repos}}</td>
+          </tr>
+          <tr>
+            <td>Gists:</td>
+            <td>{{person.public_gists}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+{{/with}}
+{{outlet}}
