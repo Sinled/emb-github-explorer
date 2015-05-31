@@ -3,6 +3,8 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'emb-github-explorer',
+    rootElement: '#app',
+    podModulePrefix: 'emb-github-explorer/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
